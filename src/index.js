@@ -94,7 +94,26 @@ menu.addEventListener('click', () => switchMenu());
 
 function switchContact() {
     // Clear the DOM
-    document.getElementById('content-page').innerHTML = 'CONTACTS PAGE';
+    contentDiv = document.getElementById('content-page');
+    contentDiv.innerHTML = '';
+    // Add a container div to hold the home grid
+    contactContainer = document.createElement('div');
+    contactContainer.id = 'container-contacts';
+    contentDiv.appendChild(contactContainer);
+    
+    contactContent1 = document.createElement('div');
+    contactContent1.className = 'content-class2';
+    contactContent1.innerHTML = 
+    '&#9742;&#65039 123 456 789</br>'+
+    '&#127968 12 Diddy Street, Donkey Town, DC'
+
+    contactContent2 = document.createElement('img');
+    contactContent2.src = 'a2.png'
+    contactContent2.id = 'map-img';
+
+    // Append the child elements to the DOM
+    contactContainer.appendChild(contactContent1);
+    contactContainer.appendChild(contactContent2);
 
     return
 }
