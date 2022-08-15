@@ -11,11 +11,10 @@ function createFood(title,img,desc) {
         title: title,
         img: img,
         desc: desc,
-        addToDom() {
+        addToDom(menuContainer) {
             const foodContainer = document.createElement('div');
             foodContainer.className = 'food-class';
             menuContainer.appendChild(foodContainer);
-
             const foodTitle = document.createElement('div');
             foodTitle.className = 'food-title';
             foodTitle.innerHTML = this.title;
@@ -74,15 +73,13 @@ function switchMenu() {
     const menuContainer = document.createElement('div');
     menuContainer.id = 'container-menu';
     contentDiv.appendChild(menuContainer);
-    
     let food1 = createFood('item1','img1','desc1');
-    food1.addToDom();
-
+    food1.addToDom(menuContainer);
     let food2 = createFood('item2','img2','desc2');
-    food2.addToDom();
+    food2.addToDom(menuContainer);
 
     let food3 = createFood('item3','img3','desc3');
-    food3.addToDom();
+    food3.addToDom(menuContainer);
 
     return
 }
@@ -117,7 +114,6 @@ function switchContact() {
 }
 const contact = document.getElementById('contact');
 contact.addEventListener('click', () => switchContact());
-
 
 switchHome();
 
