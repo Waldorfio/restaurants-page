@@ -45,11 +45,28 @@ body,html {
     align-content: center;
     text-align: center;
 
-    border: solid 1px green;
+    border: 1px solid green;
 }
     .content-class {
         font-size: 1.5em;
     }
+    .food-class {
+        display: grid;
+        border: 1px solid orange;
+    }
+    .food-class:hover {
+        background-color: aliceblue;
+    }
+        .food-title {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        .food-img {
+
+        }
+        .food-desc {
+            font-size: 1.3em;
+        }
 
 #footer {
     grid-column: 1/4;
