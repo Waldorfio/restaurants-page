@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
 
 #content {
     display: grid;
@@ -28,9 +37,19 @@
 
 #content-page {
     grid-column: 1/4;
+    padding: 30px;
+
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 
     border: solid 1px green;
 }
+    .content-class {
+        font-size: 1.5em;
+    }
 
 #footer {
     grid-column: 1/4;
