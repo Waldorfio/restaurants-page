@@ -1,6 +1,8 @@
 console.clear()
 
+
 import './style.css';
+import Icon from './ana.jpg';
 
 // A constructor to create menu item objects easily
 function createFood(title,img,desc) {
@@ -9,21 +11,21 @@ function createFood(title,img,desc) {
         img: img,
         desc: desc,
         addToDom() {
-            foodContainer = document.createElement('div');
+            const foodContainer = document.createElement('div');
             foodContainer.className = 'food-class';
             menuContainer.appendChild(foodContainer);
 
-            foodTitle = document.createElement('div');
+            const foodTitle = document.createElement('div');
             foodTitle.className = 'food-title';
             foodTitle.innerHTML = this.title;
             foodContainer.appendChild(foodTitle);
 
-            foodImg = document.createElement('div');
+            const foodImg = document.createElement('div');
             foodImg.className = 'food-img';
             foodImg.innerHTML = this.img;
             foodContainer.appendChild(foodImg);
 
-            foodDesc = document.createElement('div');
+            const foodDesc = document.createElement('div');
             foodDesc.className = 'food-desc';
             foodDesc.innerHTML = this.desc;
             foodContainer.appendChild(foodDesc);
@@ -31,32 +33,27 @@ function createFood(title,img,desc) {
     };
 }
 
-
-
-
 function switchHome() {
     // Clear the DOM
-    contentDiv = document.getElementById('content-page');
+    const contentDiv = document.getElementById('content-page');
     contentDiv.innerHTML = '';
     // Add a container div to hold the home grid
-    homeContainer = document.createElement('div');
+    const homeContainer = document.createElement('div');
     homeContainer.id = 'container-home';
     contentDiv.appendChild(homeContainer);
-    
-    homeContent1 = document.createElement('div');
+    const homeContent1 = document.createElement('div');
     homeContent1.className = 'content-class';
     homeContent1.innerHTML = 
     'The best authentic tacos in Australia.</br>'+
     'Come try our award winning tacos by Chef <b>Ana Sanchez</b> today.'
 
-    homeContent2 = document.createElement('img');
-    homeContent2.src = 'a.png'
+    const homeContent2 = document.createElement('img');
+    homeContent2.src = Icon;
     homeContent2.id = 'chef-img';
 
-    homeContent3 = document.createElement('div');
+    const homeContent3 = document.createElement('div');
     homeContent3.className = 'content-class';
     homeContent3.innerHTML = '<em>Why not both? - <b>Ana Sanchez</b></em>'
-
     // Append the child elements to the DOM
     homeContainer.appendChild(homeContent1);
     homeContainer.appendChild(homeContent2);
@@ -70,10 +67,10 @@ home.addEventListener('click', () => switchHome());
 
 function switchMenu() {
     // Clear the DOM
-    contentDiv = document.getElementById('content-page');
+    const contentDiv = document.getElementById('content-page');
     contentDiv.innerHTML = '';
     // Add a container div to hold the menu grid
-    menuContainer = document.createElement('div');
+    const menuContainer = document.createElement('div');
     menuContainer.id = 'container-menu';
     contentDiv.appendChild(menuContainer);
     
@@ -94,21 +91,21 @@ menu.addEventListener('click', () => switchMenu());
 
 function switchContact() {
     // Clear the DOM
-    contentDiv = document.getElementById('content-page');
+    const contentDiv = document.getElementById('content-page');
     contentDiv.innerHTML = '';
     // Add a container div to hold the home grid
-    contactContainer = document.createElement('div');
+    const contactContainer = document.createElement('div');
     contactContainer.id = 'container-contacts';
     contentDiv.appendChild(contactContainer);
     
-    contactContent1 = document.createElement('div');
+    const contactContent1 = document.createElement('div');
     contactContent1.className = 'content-class2';
     contactContent1.innerHTML = 
     '&#9742;&#65039 123 456 789</br>'+
     '&#127968 12 Diddy Street, Donkey Town, DC'
 
-    contactContent2 = document.createElement('img');
-    contactContent2.src = 'a2.png'
+    const contactContent2 = document.createElement('img');
+    contactContent2.src = 'a2.png';
     contactContent2.id = 'map-img';
 
     // Append the child elements to the DOM
@@ -119,6 +116,7 @@ function switchContact() {
 }
 const contact = document.getElementById('contact');
 contact.addEventListener('click', () => switchContact());
+
 
 switchHome();
 

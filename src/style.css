@@ -12,7 +12,6 @@ body,html {
     display: grid;
     grid-template-rows: 70px 30px 6fr 1fr;
     grid-template-columns: repeat(3, 1fr);
-
     height: calc(100vh - 3px);          /* Add this to make footer appear at bottom of page */
 }
 
