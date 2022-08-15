@@ -1,0 +1,41 @@
+
+#content {
+    display: grid;
+    grid-template-rows: 2fr 1fr 6fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#title-banner {
+    grid-column: 1/4;
+    justify-self: center;
+    align-self: center;
+
+    border: solid 1px red;
+}
+
+.tabs {
+    justify-self: center;
+    align-self: center;
+
+    border: solid 1px blue;
+}
+    .tabs:hover {
+        background-color: aliceblue;
+    }
+    .tabs:active {
+        background-color: bisque;
+    }
+
+#content-page {
+    grid-column: 1/4;
+
+    border: solid 1px green;
+}
+
+#footer {
+    grid-column: 1/4;
+    justify-self: center;
+    align-self: center;
+    
+    border: solid 1px red;
+}
