@@ -2,7 +2,8 @@ console.clear()
 
 
 import './style.css';
-import Icon from './ana.jpg';
+// import Icon from './ana.jpg';
+
 
 // A constructor to create menu item objects easily
 function createFood(title,img,desc) {
@@ -48,7 +49,7 @@ function switchHome() {
     'Come try our award winning tacos by Chef <b>Ana Sanchez</b> today.'
 
     const homeContent2 = document.createElement('img');
-    homeContent2.src = Icon;
+    homeContent2.src = 'placeholder';
     homeContent2.id = 'chef-img';
 
     const homeContent3 = document.createElement('div');
