@@ -10,7 +10,7 @@ body,html {
 
 #content {
     display: grid;
-    grid-template-rows: 2fr 1fr 6fr 1fr;
+    grid-template-rows: 70px 30px 6fr 1fr;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -34,15 +34,16 @@ body,html {
     .tabs:active {
         background-color: bisque;
     }
-
 #content-page {
     grid-column: 1/4;
-    padding: 30px;
-
+}
+#container-home {
     display: grid;
     gap: 20px;
     justify-content: center;
     align-content: center;
+
+    padding: 30px;
     text-align: center;
 
     border: 1px solid green;
@@ -50,6 +51,17 @@ body,html {
     .content-class {
         font-size: 1.5em;
     }
+#container-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);    /* Automatically decides how many 200px columns to create */
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+
+    padding: 30px;
+
+    border: 1px solid red;
+}
     .food-class {
         display: grid;
         border: 1px solid orange;

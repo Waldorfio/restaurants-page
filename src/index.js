@@ -11,7 +11,7 @@ function createFood(title,img,desc) {
         addToDom() {
             foodContainer = document.createElement('div');
             foodContainer.className = 'food-class';
-            document.getElementById('content-page').appendChild(foodContainer);
+            menuContainer.appendChild(foodContainer);
 
             foodTitle = document.createElement('div');
             foodTitle.className = 'food-title';
@@ -35,7 +35,13 @@ function createFood(title,img,desc) {
 
 
 function switchHome() {
-    document.getElementById('content-page').innerHTML = '';       // Clears the container div
+    // Clear the DOM
+    contentDiv = document.getElementById('content-page');
+    contentDiv.innerHTML = '';
+    // Add a container div to hold the home grid
+    homeContainer = document.createElement('div');
+    homeContainer.id = 'container-home';
+    contentDiv.appendChild(homeContainer);
     
     homeContent1 = document.createElement('div');
     homeContent1.className = 'content-class';
@@ -52,9 +58,9 @@ function switchHome() {
     homeContent3.innerHTML = '<em>Why not both? - <b>Ana Sanchez</b></em>'
 
     // Append the child elements to the DOM
-    document.getElementById('content-page').appendChild(homeContent1);
-    document.getElementById('content-page').appendChild(homeContent2);
-    document.getElementById('content-page').appendChild(homeContent3);
+    homeContainer.appendChild(homeContent1);
+    homeContainer.appendChild(homeContent2);
+    homeContainer.appendChild(homeContent3);
 
     return
 }
@@ -64,7 +70,12 @@ home.addEventListener('click', () => switchHome());
 
 function switchMenu() {
     // Clear the DOM
-    document.getElementById('content-page').innerHTML = '';
+    contentDiv = document.getElementById('content-page');
+    contentDiv.innerHTML = '';
+    // Add a container div to hold the menu grid
+    menuContainer = document.createElement('div');
+    menuContainer.id = 'container-menu';
+    contentDiv.appendChild(menuContainer);
     
     let food1 = createFood('item1','img1','desc1');
     food1.addToDom();
