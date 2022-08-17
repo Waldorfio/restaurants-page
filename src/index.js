@@ -2,7 +2,8 @@ console.clear()
 
 
 import './style.css';
-// import Icon from './ana.jpg';
+import ChefImg from './ana.jpg';
+import MapImg from './map.png'
 
 
 // A constructor to create menu item objects easily
@@ -48,7 +49,7 @@ function switchHome() {
     'Come try our award winning tacos by Chef <b>Ana Sanchez</b> today.'
 
     const homeContent2 = document.createElement('img');
-    homeContent2.src = 'placeholder';
+    homeContent2.src = ChefImg;
     homeContent2.id = 'chef-img';
 
     const homeContent3 = document.createElement('div');
@@ -103,7 +104,7 @@ function switchContact() {
     '&#127968 12 Diddy Street, Donkey Town, DC'
 
     const contactContent2 = document.createElement('img');
-    contactContent2.src = 'a2.png';
+    contactContent2.src = MapImg;
     contactContent2.id = 'map-img';
 
     // Append the child elements to the DOM
