@@ -1,5 +1,5 @@
 # Project: Webpack based Restaraunts Page
-
+### [LINK](https://waldorfio.github.io/restaurants-page/)
 An interactive restaurant page built using javascript.
 
 Goal:
